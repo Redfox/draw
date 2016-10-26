@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.heart{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border: 1px solid #f10455;
+    transform: rotate(-135deg);
+    margin-top: 200px;
+    background: #f10455;
+    animation: puse 1s infinite alternate;
+}
+
+.heart:before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #f10455;
+    border-radius: 50%;
+    bottom: -100px;
+    left: 0;
+    background: #f10455;
+}
+
+.heart:after{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #f10455;
+    border-radius: 50%;
+    right: -100px;
+    background: #f10455;
+}
+
+@keyframes puse{
+    from {transform: scale(1) rotate(-135deg);}
+    to {transform: scale(1.5) rotate(-135deg);}
+}
